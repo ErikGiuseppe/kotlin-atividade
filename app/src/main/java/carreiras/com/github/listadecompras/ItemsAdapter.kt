@@ -10,13 +10,15 @@ import androidx.recyclerview.widget.RecyclerView
 * Os metodos que irao fazer a visualizacao e vincular os dados a visualizacao (ViewHolder)
 */
 class ItemsAdapter : RecyclerView.Adapter<ItemsAdapter.ItemViewHolder>() {
-    
+
     //Lista para o RecycleView
     private val items = mutableListOf<ItemModel>()
 
     //Adicionando item na lista
     fun addItem(newItem: ItemModel) {
         items.add(newItem)
+        //Essa funcao avisa a recycle view que a lista foi atualizada
+        //E entao muda a visualizacao na tela
         notifyDataSetChanged()
     }
 
